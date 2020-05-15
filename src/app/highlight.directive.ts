@@ -8,7 +8,6 @@ export class HighlightDirective {
   @Input()highlightColor:string
 
   constructor(private el: ElementRef) {
-    // el.nativeElement.style.backgroundColor = "yellow";
   }
 
   @HostListener("mouseenter")
