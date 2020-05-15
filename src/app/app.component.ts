@@ -7,4 +7,5 @@ import { Component, VERSION } from '@angular/core';
 })
 export class AppComponent  {
   name = 'Angular1 ' + VERSION.major;
+  color = 'yellow';
 }
