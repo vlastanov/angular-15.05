@@ -1,6 +1,8 @@
-<hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
-</p>
-<p  [appHighlight]='color'>Highlight me!</p>
-<p appHighlight highlightColor='green'>Highlight me2!</p>
+<h4>Pick a highlight color</h4>
+<div>
+  <input type="radio" name="colors" (click)="color='lightgreen'">Green
+  <input type="radio" name="colors" (click)="color='yellow'">Yellow
+  <input type="radio" name="colors" (click)="color='cyan'">Cyan
+</div>
+<p  [appHighlight]='color' defaultColor="violet">Highlight me!</p>
+<p appHighlight highlightColor='green' defaultColor="violet">Highlight me2!</p>
