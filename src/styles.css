@@ -1,2 +1,25 @@
 /* Add application styles & imports to this file! */
 @import '~bootstrap/dist/css/bootstrap.min.css';
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+body{
+    padding-top: 32px;
+    height: 100%;
+}
+
+.body-content{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.applicationHost{
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+
+    margin: 0 auto -60px;
+    padding: 0 0 90px;
+}
