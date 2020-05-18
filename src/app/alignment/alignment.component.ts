@@ -14,20 +14,20 @@ import {
   styleUrls: ["./alignment.component.css"]
 })
 export class AlignmentComponent implements OnInit {
-  broadeningLaneForm2: FormGroup;
-  constructor(private fb: FormBuilder) {}
+  // broadeningLaneForm2: FormGroup;
+  // constructor(private fb: FormBuilder) {}
 
-  save(){
-    console.log(this.broadeningLaneForm22.value);
-  }
+  // save(){
+  //   console.log(this.broadeningLaneForm22.value);
+  // }
 
   ngOnInit() {
-    this.broadeningLaneForm2 = this.fb.group(
-      {
-        laneWidth: 6.5 ,
-        radiusPr: 150 
-      }
-    );
+    // this.broadeningLaneForm2 = this.fb.group(
+    //   {
+    //     laneWidth: 6.5 ,
+    //     radiusPr: 150 
+    //   }
+    // );
   }
 }
 
