@@ -24,8 +24,8 @@ export class AlignmentComponent implements OnInit {
   ngOnInit() {
     this.crossSectionForm = this.fb.group(
       {
-        laneWidth: ["" ],
-        radiusPr: ["" ],
+        laneWidth: 6.5 ,
+        radiusPr: 150 
       }
     );
   }

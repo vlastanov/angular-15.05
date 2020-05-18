@@ -3,8 +3,12 @@
 </p>
 <form (ngSubmit)='save()' [formGroup]='crossSectionForm' >
     <div>
-        <label for="firstNameId">First Name</label>
-        <input class="form-control" type="text" id="firstNameId" formControlName='laneWidth'>
+        <label for="laneWidthId">Ширина на лентите</label>
+        <input class="form-control" type="text" id="laneWidthId" formControlName='laneWidth'>
+    </div>  
+     <div>
+        <label for="radiusPrId">Радиус</label>
+        <input class="form-control" type="text" id="radiusPrId" formControlName='radiusPr'>
     </div>  
     <div>
         <button class="btn btn-primary mr-3" type="submit" [disabled]='!crossSectionForm.valid'>Save</button>
