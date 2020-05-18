@@ -2,10 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { RouterModule, Routes } from '@angular/router';
-import {TempComponent} from './temp/temp.component';
 
 const routes: Routes = [
-  { path: 'temp', component: TempComponent },
 ];
 
 @NgModule({
