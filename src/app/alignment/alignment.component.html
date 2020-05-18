@@ -1,3 +1,13 @@
 <p>
 Пълно уширение на платното за движение в криви
 </p>
+<form (ngSubmit)='save()' [formGroup]='crossSectionForm' >
+    <div>
+        <label for="firstNameId">First Name</label>
+        <input class="form-control" type="text" id="firstNameId" formControlName='laneWidth'>
+    </div>  
+    <div>
+        <button class="btn btn-primary mr-3" type="submit" [disabled]='!crossSectionForm.valid'>Save</button>
+    </div>
+</form>
+

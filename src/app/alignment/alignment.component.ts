@@ -17,11 +17,15 @@ export class AlignmentComponent implements OnInit {
   crossSectionForm: FormGroup;
   constructor(private fb: FormBuilder) {}
 
+  save(){
+    // console.log(this.crossSectionForm);
+  }
+
   ngOnInit() {
     this.crossSectionForm = this.fb.group(
       {
         laneWidth: ["" ],
-        Rpr: ["" ],
+        radiusPr: ["" ],
       }
     );
   }
