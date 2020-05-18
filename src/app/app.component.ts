@@ -67,10 +67,6 @@ export class AppComponent {
   name = "Angular1 " + VERSION.major;
   color = "yellow";
 
-  filter1: string;
-  filter2: string;
-  @ViewChildren("divElem,nameElement") inputElementRefs: QueryList<ElementRef>;
-  @ViewChildren(NgModel) inputElementRefs2: QueryList<NgModel>;
 
   constructor(private fb: FormBuilder) {}
 

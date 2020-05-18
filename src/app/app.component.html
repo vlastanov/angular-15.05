@@ -8,25 +8,10 @@
 <p  [appHighlight]='color' defaultColor="violet">Highlight me!</p>
 <p appHighlight highlightColor='green' defaultColor="violet">Highlight me2!</p>
 
-<div class="row">
 
-    <div class="col-md-3">
-        <input type="text" #divElem [ngModel]='filter1' (ngModelChange)='filter1=$event'>
-        <br>
-        <div>
-            Filter1: {{filter1}}
-        </div>
-    </div>
 
-    <div class="col-md-3">
-        <input type="text" #nameElement [ngModel]='filter2' (ngModelChange)='onFilter2($event)'>
-        <br>
-        <div>
-            Filter2: {{filter2}}
-        </div>
-    </div>
 
-</div>
+
 
 <form (ngSubmit)='save()' [formGroup]='customerForm' >
     <div>
