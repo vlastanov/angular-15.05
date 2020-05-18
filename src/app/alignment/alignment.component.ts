@@ -14,15 +14,15 @@ import {
   styleUrls: ["./alignment.component.css"]
 })
 export class AlignmentComponent implements OnInit {
-  broadeningLaneForm: FormGroup;
+  broadeningLaneForm2: FormGroup;
   constructor(private fb: FormBuilder) {}
 
   save(){
-    console.log(this.broadeningLaneForm.value);
+    console.log(this.broadeningLaneForm22.value);
   }
 
   ngOnInit() {
-    this.broadeningLaneForm = this.fb.group(
+    this.broadeningLaneForm2 = this.fb.group(
       {
         laneWidth: 6.5 ,
         radiusPr: 150 
