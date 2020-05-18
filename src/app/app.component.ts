@@ -15,7 +15,6 @@ import {
   ValidatorFn
 } from "@angular/forms";
 import { Subscription } from "rxjs";
-
 import { debounceTime } from "rxjs/operators";
 
 function ratingRange(c: AbstractControl) {
