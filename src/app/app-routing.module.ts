@@ -7,7 +7,6 @@ import {AlignmentComponent} from './alignment/alignment.component';
 
 const routes: Routes = [
   { path: 'temp', component: TempComponent },
-  { path: 'alignment', component: AlignmentComponent }
 ];
 
 @NgModule({
