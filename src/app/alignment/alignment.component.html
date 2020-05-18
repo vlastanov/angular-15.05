@@ -1,7 +1,7 @@
-<p>
+<h4>
 Пълно уширение на платното за движение в криви
-</p>
-<form (ngSubmit)='save()' [formGroup]='crossSectionForm' >
+</h4>
+<form (ngSubmit)='save()' [formGroup]='broadeningLaneForm' >
     <div>
         <label for="laneWidthId">Ширина на лентите</label>
         <input class="form-control" type="text" id="laneWidthId" formControlName='laneWidth'>
@@ -11,7 +11,7 @@
         <input class="form-control" type="text" id="radiusPrId" formControlName='radiusPr'>
     </div>  
     <div>
-        <button class="btn btn-primary mr-3" type="submit" [disabled]='!crossSectionForm.valid'>Save</button>
+        <button class="btn btn-primary mr-3" type="submit" [disabled]='!broadeningLaneForm.valid'>Save</button>
     </div>
 </form>
 
