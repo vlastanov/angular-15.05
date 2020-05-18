@@ -18,7 +18,7 @@ export class AlignmentComponent implements OnInit {
   constructor(private fb: FormBuilder) {}
 
   save(){
-    // console.log(this.crossSectionForm);
+    console.log(this.crossSectionForm.value);
   }
 
   ngOnInit() {
