@@ -13,7 +13,7 @@ const routes: Routes = [
     component: Play3Component,
     // children: [
     //   {
-    //     path: "child-a",
+    //     path: "childa",
     //     component: ChildAComponent
     //   },
     //   // {
