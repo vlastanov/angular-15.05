@@ -8,7 +8,6 @@ import { Play3Component } from './play3/play3.component';
 
 const routes: Routes = [
   { path: "play2", component: Play2Component },
-  { path: "play1", component: Play1Component },
   {
     path: "play1/:id",
     component: Play3Component,
@@ -17,12 +16,13 @@ const routes: Routes = [
     //     path: "child-a",
     //     component: ChildAComponent
     //   },
-    //   {
-    //     path: "child-b",
-    //     component: ChildBComponent
-    //   }
+    //   // {
+    //   //   path: "child-b",
+    //   //   component: ChildBComponent
+    //   // }
     // ]
   },
+  { path: "play1", component: Play1Component },
   { path: "", redirectTo: "/play1", pathMatch: "full" }, 
   { path: "**", component: Play1Component }
   // { path: 'tablica', component: TablicaComponent, outlet: 'sidebar' },
