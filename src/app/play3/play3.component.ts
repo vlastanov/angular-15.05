@@ -30,7 +30,7 @@ export class Play3Component implements OnInit {
     this.route.params.subscribe(params=>{
       console.log(params.id)
     })
-    this.router.navigate(['/play2'], { queryParams: { order: 'popular' } });
+    this.router.navigate(['/play2'], { queryParams: { popular: 'newPop'}, queryParamsHandling: 'merge' });
   }
 
 }
