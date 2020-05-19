@@ -70,28 +70,11 @@ export class AppComponent {
 
   constructor(private fb: FormBuilder) {}
 
-  private _sub: Subscription;
-  private _filterInput: NgModel;
+  
 
-  get filterInput(): NgModel {
-    return this._filterInput;
-  }
+ 
 
-  @ViewChild(NgModel)
-  set filterInput(value: NgModel) {
-    // console.log(value)
-    this._filterInput = value;
-    if (this.filterInput && !this._sub) {
-      this._sub = this.filterInput.valueChanges.subscribe(changes => {
-        this.filter1 = changes;
-        return console.log(this.filter1);
-      });
-    }
-  }
-
-  onFilter2(event: string) {
-    this.filter2 = event;
-  }
+  
 
   ngOnInit(): void {
     this.customerForm = this.fb.group(
