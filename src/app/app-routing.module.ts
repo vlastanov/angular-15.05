@@ -8,6 +8,8 @@ import { Play2Component } from './play2/play2.component';
 const routes: Routes = [
    { path: 'play1', component: Play1Component },
    { path: 'play2', component: Play2Component },
+  { path: '',   redirectTo: '/first-component', pathMatch: 'full' }, // redirect to `first-component`
+   { path: '**', component: Play1Component },
   //  { path: 'test5', component: Test5Component },
   // { path: 'tablica', component: TablicaComponent, outlet: 'sidebar' },
 ];
