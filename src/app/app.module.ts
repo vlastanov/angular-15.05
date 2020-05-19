@@ -7,6 +7,7 @@ import { HighlightDirective } from "./play1/highlight.directive";
 import { AppRoutingModule } from "./app-routing.module";
 import { Play1Component } from './play1/play1.component';
 import { Play2Component } from './play2/play2.component';
+import { Play3Component } from './play3/play3.component';
 
 
 
@@ -17,6 +18,7 @@ import { Play2Component } from './play2/play2.component';
     HighlightDirective,
     Play1Component,
     Play2Component,
+    Play3Component,
   ],
   bootstrap: [AppComponent]
 })

@@ -1,7 +1,8 @@
 <nav class="navbar navbar-fixed-top navbar-dark bg-inverse">
 	<div class="container">
 		<ul class="nav " routerLinkActive="active">
-			<li class="nav-item"><a class="nav-link"  [queryParams]="{ filter: 'new' }" [routerLink]="['./play1', 2]">Play1</a></li>
+			<li class="nav-item"><a class="nav-link"   [routerLink]="['./play1']">Play1</a></li>
+			<li class="nav-item"><a class="nav-link"  [queryParams]="{ filter: 'new' }" [routerLink]="['./play1', 2]">Play3</a></li>
 			<li class="nav-item"><a class="nav-link" routerLink="./play2">Play2</a></li>
 			<li> <a [routerLink]="[{ outlets: { 'sidebar': ['tablica'] } }]">Таблица</a> </li>
 		</ul>
