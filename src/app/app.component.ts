@@ -64,8 +64,7 @@ export class AppComponent {
     minlength: "must be longer than 3 characters"
   };
 
-  name = "Angular1 " + VERSION.major;
-  color = "yellow";
+ 
 
 
   constructor(private fb: FormBuilder) {}

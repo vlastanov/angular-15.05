@@ -3,9 +3,10 @@ import { BrowserModule } from "@angular/platform-browser";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
 import { AppComponent } from "./app.component";
-import { HighlightDirective } from "./highlight.directive";
+import { HighlightDirective } from "./play1/highlight.directive";
 import { AppRoutingModule } from "./app-routing.module";
 import { Play1Component } from './play1/play1.component';
+import { Play2Component } from './play2/play2.component';
 
 
 
@@ -15,6 +16,7 @@ import { Play1Component } from './play1/play1.component';
     AppComponent,
     HighlightDirective,
     Play1Component,
+    Play2Component,
   ],
   bootstrap: [AppComponent]
 })
