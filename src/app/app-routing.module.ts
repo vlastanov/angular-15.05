@@ -8,7 +8,7 @@ import { Play2Component } from "./play2/play2.component";
 const routes: Routes = [
   { path: "play2", component: Play2Component },
   {
-    path: "play1",
+    path: "play1/:id",
     component: Play1Component,
     // children: [
     //   {

@@ -1,5 +1,7 @@
 import { Component, OnInit} from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+import { Observable } from 'rxjs';
+import { switchMap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-play1',
@@ -9,10 +11,11 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 export class Play1Component implements OnInit {
   color = "yellow";
   constructor(  private route: ActivatedRoute,) { }
+  
 
   ngOnInit() {
     this.route.queryParams.subscribe(params=>{
-    console.log(params)
+    console.log(params['id'])
       
     })
   }
