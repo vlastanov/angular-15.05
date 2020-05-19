@@ -15,8 +15,18 @@ export class Play1Component implements OnInit {
 
   ngOnInit() {
     this.route.queryParams.subscribe(params=>{
-    console.log(params['id'])
+    // console.log(params)
       
+    })
+
+    this.route.paramMap.subscribe(params=>{
+    console.log(params.get('id'))
+      console.log(params)
+
+
+    })
+    this.route.params.subscribe(params=>{
+      console.log(params.id)
     })
   }
 
