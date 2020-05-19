@@ -8,7 +8,7 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 })
 export class Play1Component implements OnInit {
   color = "yellow";
-  constructor() { }
+  constructor(  private route: ActivatedRoute,) { }
 
   ngOnInit() {
   }
