@@ -26,9 +26,10 @@ import { debounceTime } from "rxjs/operators";
 })
 export class AppComponent {
  
-
- 
-
+ ngOnInit(){
+   
   
+
+ }
 
 }

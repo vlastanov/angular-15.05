@@ -15,12 +15,12 @@ export class Play1Component implements OnInit {
 
   ngOnInit() {
     this.route.queryParams.subscribe(params=>{
-    // console.log(params)
+    console.log(params)
       
     })
 
     this.route.paramMap.subscribe(params=>{
-    console.log(params.get('id'))
+    // console.log(params.get('id'))
       console.log(params)
 
 
@@ -28,6 +28,7 @@ export class Play1Component implements OnInit {
     this.route.params.subscribe(params=>{
       console.log(params.id)
     })
+    // this.route.navigate(['/products'], { queryParams: { order: 'popular' } });
   }
 
 }
