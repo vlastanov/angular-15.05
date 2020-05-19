@@ -8,6 +8,7 @@ import { AppRoutingModule } from "./app-routing.module";
 import { Play1Component } from './play1/play1.component';
 import { Play2Component } from './play2/play2.component';
 import { Play3Component } from './play3/play3.component';
+import { MyChildAComponent } from './my-child-a/my-child-a.component';
 
 
 
@@ -19,6 +20,7 @@ import { Play3Component } from './play3/play3.component';
     Play1Component,
     Play2Component,
     Play3Component,
+    MyChildAComponent,
   ],
   bootstrap: [AppComponent]
 })
