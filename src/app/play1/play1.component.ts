@@ -12,6 +12,6 @@ export class Play1Component implements OnInit {
   color = "yellow";
   constructor(private route: ActivatedRoute, private router: Router) {}
   ngOnInit() {
-    this.router.navigate([1], { relativeTo: this.route });
+    // this.router.navigate(['one'], { relativeTo: this.route });
   }
 }
