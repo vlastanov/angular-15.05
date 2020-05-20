@@ -1,22 +1,7 @@
 
-import {
-   OnInit ,
-  Component,
-  VERSION,
-  ViewChildren,
-  QueryList,
-  ElementRef,
-  ViewChild
-} from "@angular/core";
-import {
-  NgModel,
-  FormBuilder,
-  FormGroup,
-  AbstractControl,
-  Validators,
-  ValidatorFn
-} from "@angular/forms";
-import { Subscription } from "rxjs";
+import {   OnInit ,  Component,} from "@angular/core";
+import {  FormBuilder,  FormGroup,  AbstractControl,  Validators,  ValidatorFn} from "@angular/forms";
+// import { Subscription } from "rxjs";
 import { debounceTime } from "rxjs/operators";
 
 
