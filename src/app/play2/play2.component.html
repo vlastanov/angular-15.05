@@ -30,13 +30,13 @@
 	<div>
 		<label for="ratingRangeId">Rating Range</label>
 		<input class="form-control" type="text" id="ratingRangeId" formControlName='ratingRange'
-            [ngClass]="{'is-invalid': (customerForm.get('ratingRange').touched || customerForm.get('ratingRange').dirty )}">
+            [ngClass]="{'is-invalid': ratingErrors }">
 		<span class="invalid-feedback">
             <span *ngIf="customerForm.get('ratingRange').errors?.required">
-                Please enter your last name
+                required
             </span>
-		<span *ngIf="customerForm.get('ratingRange').errors?.minlength">
-                must be longer than 3 characters
+		<span *ngIf="customerForm.get('ratingRange').errors?.outOfRange">
+                {{ratingErrors}}
             </span>
 		</span>
 	</div>

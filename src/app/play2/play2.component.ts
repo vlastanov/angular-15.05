@@ -16,7 +16,7 @@ function ratingRange(c: AbstractControl) {
 function myValidator(min: number, max: number): ValidatorFn {
   let rangeRes = function ratingRange(c: AbstractControl) {
     let val = +c.value < min || +c.value > max || isNaN(+c.value);
-    if (+c.value !== null && val) {
+    if (c.value !== null && val) {
       return { outOfRange: true };
     }
     return null;
@@ -46,6 +46,7 @@ export class Play2Component implements OnInit {
 
   customerForm: FormGroup;
   firstNameMessage: string;
+  ratingErrors=''
 
   private validationMessages = {
     required: "Please enter your first name",
@@ -57,9 +58,9 @@ export class Play2Component implements OnInit {
    ngOnInit(): void {
     this.customerForm = this.fb.group(
       {
-        firstName: ["", [Validators.required, Validators.minLength(3)]],
-        lastName: [{ value: "", disabled: true }],
-        ratingRange: [null, [myValidator(0, 8)]],
+        firstName: ["", ],
+        lastName: [''], //{ value: "", disabled: false }
+        ratingRange: [null],
         address: this.fb.group({
           city: ["", [Validators.required, Validators.minLength(3)]]
         })
@@ -68,12 +69,19 @@ export class Play2Component implements OnInit {
     );
 
     let firstname = this.customerForm.get("firstName");
+    firstname.setValidators([Validators.required, Validators.minLength(3)]);
     firstname.valueChanges.pipe(debounceTime(1000)).subscribe(value => {
       this.setFirstName(firstname);
     });
-    
-    // firstname.disable();
-    // firstname.setValidators(Validators.required);
+
+    let lastName=this.customerForm.get('lastName')
+    lastName.disable()
+
+    let ratingRange=this.customerForm.get('ratingRange')
+    ratingRange.setValidators([Validators.required,myValidator(0, 8)])
+    ratingRange.valueChanges.subscribe(value=>{
+      this.setRatingRagene(ratingRange)       
+    })       
     // firstname.clearValidators()
     // firstname.updateValueAndValidity
   }
@@ -86,6 +94,15 @@ export class Play2Component implements OnInit {
         .map(key => this.validationMessages[key])
         .join(" ");
     }
+  }
+
+  setRatingRagene(c: AbstractControl) {
+    if((c.touched || c.dirty ) && c.errors){
+              console.log(this.ratingErrors)
+        }
+        else{
+          this.ratingErrors=''
+        }
   }
 
   populateTestData() {
