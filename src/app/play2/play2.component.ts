@@ -30,8 +30,8 @@ function ratingRange(c: AbstractControl) {
 
 function myValidator(min: number, max: number): ValidatorFn {
   let rangeRes = function ratingRange(c: AbstractControl) {
-    let val = c.value < min || c.value > max || isNaN(c.value);
-    if (c.value !== null && val) {
+    let val = +c.value < min || +c.value > max || isNaN(+c.value);
+    if (+c.value !== null && val) {
       return { outOfRange: true };
     }
     return null;
@@ -86,6 +86,11 @@ export class Play2Component implements OnInit {
     firstname.valueChanges.pipe(debounceTime(1000)).subscribe(value => {
       this.setFirstName(firstname);
     });
+    
+    // firstname.disable();
+    // firstname.setValidators(Validators.required);
+    // firstname.clearValidators()
+    // firstname.updateValueAndValidity
   }
 
   setFirstName(c: AbstractControl) {
@@ -100,10 +105,6 @@ export class Play2Component implements OnInit {
 
   populateTestData() {
     let firstname = this.customerForm.get("firstName");
-    // firstname.disable();
-    // firstname.setValidators(Validators.required);
-    // firstname.clearValidators()
-    // firstname.updateValueAndValidity
   }
 
   save() {
