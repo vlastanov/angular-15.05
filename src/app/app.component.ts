@@ -1,35 +1,9 @@
-import {
-  Component,
-  VERSION,
-  ViewChildren,
-  QueryList,
-  ElementRef,
-  ViewChild
-} from "@angular/core";
-import {
-  NgModel,
-  FormBuilder,
-  FormGroup,
-  AbstractControl,
-  Validators,
-  ValidatorFn
-} from "@angular/forms";
-import { Subscription } from "rxjs";
-import { debounceTime } from "rxjs/operators";
-
-
+import { Component,} from "@angular/core";
+import { NgModel} from "@angular/forms";
 
 @Component({
   selector: "my-app",
   templateUrl: "./app.component.html",
   styleUrls: ["./app.component.css"]
 })
-export class AppComponent {
- 
- ngOnInit(){
-   
-  
-
- }
-
-}
+export class AppComponent {}
