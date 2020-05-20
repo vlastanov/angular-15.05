@@ -56,7 +56,6 @@ function compareValidator(c: AbstractControl) {
 @Component({
   selector: 'app-play2',
   templateUrl: './play2.component.html',
-  styleUrls: ['./play2.component.css']
 })
 export class Play2Component implements OnInit {
 
@@ -68,11 +67,7 @@ export class Play2Component implements OnInit {
     minlength: "must be longer than 3 characters"
   };
 
- 
-
-
   constructor(private fb: FormBuilder) {}
-
 
    ngOnInit(): void {
     this.customerForm = this.fb.group(
